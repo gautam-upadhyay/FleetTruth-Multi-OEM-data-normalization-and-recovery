@@ -1,0 +1,73 @@
+{
+  "recordedAt": "2026-10-01T22:56:01.305307+00:00",
+  "target": "http://127.0.0.1:8081",
+  "scope": "13 bounded authenticated HTTP regression checks; not a comprehensive DAST scan or penetration test",
+  "checks": [
+    {
+      "name": "Anonymous overview denied",
+      "passed": true,
+      "observed": 401
+    },
+    {
+      "name": "Malformed JWT denied",
+      "passed": true,
+      "observed": 401
+    },
+    {
+      "name": "Anonymous metrics denied",
+      "passed": true,
+      "observed": 401
+    },
+    {
+      "name": "Viewer metrics denied",
+      "passed": true,
+      "observed": 403
+    },
+    {
+      "name": "Viewer raw evidence denied",
+      "passed": true,
+      "observed": 403
+    },
+    {
+      "name": "Authenticated identity available",
+      "passed": true,
+      "observed": 200
+    },
+    {
+      "name": "Viewer replay denied",
+      "passed": true,
+      "observed": 403
+    },
+    {
+      "name": "Engineer erasure denied",
+      "passed": true,
+      "observed": 403
+    },
+    {
+      "name": "Cross-tenant vehicle concealed",
+      "passed": true,
+      "observed": 404
+    },
+    {
+      "name": "Search treats SQL syntax as data",
+      "passed": true,
+      "observed": 200
+    },
+    {
+      "name": "Cross-origin access is not granted",
+      "passed": true,
+      "observed": null
+    },
+    {
+      "name": "MIME sniffing disabled",
+      "passed": true,
+      "observed": "nosniff"
+    },
+    {
+      "name": "API framing disabled",
+      "passed": true,
+      "observed": "default-src 'none'; frame-ancestors 'none'"
+    }
+  ],
+  "passed": true
+}

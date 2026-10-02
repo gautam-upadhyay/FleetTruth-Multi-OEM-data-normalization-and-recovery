@@ -1,0 +1,286 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1380 940" width="100%" height="100%" style="background:#0b1120; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Card Gradients -->
+    <linearGradient id="tenantCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="oemCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="vehicleCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="eventCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="alertCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Markers -->
+    <marker id="erd-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+    </marker>
+    <marker id="crows-foot" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 12 6 L 0 11 M 12 1 L 12 11" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+    </marker>
+    <marker id="one-to-one" viewBox="0 0 12 12" refX="8" refY="6" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 4 1 L 4 11 M 8 1 L 8 11" fill="none" stroke="#10b981" stroke-width="2"/>
+    </marker>
+  </defs>
+
+  <!-- Title & Meta Header -->
+  <text x="50" y="45" font-size="24" font-weight="700" fill="#f8fafc">FleetTruth: Relational &amp; Telemetry Data Model (ERD)</text>
+  <text x="50" y="70" font-size="13" fill="#94a3b8">Multi-tenant hierarchy, vehicle CQRS state projection, immutable raw ledger, schema contracts, and durable outbox</text>
+
+  <!-- ================= RELATIONSHIP CONNECTORS ================= -->
+
+  <!-- TENANTS -> FLEETS (1:N) -->
+  <path d="M 480 200 L 480 225 Q 480 235 440 235 L 400 235 L 400 250" fill="none" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- TENANTS -> DRIVERS (1:N) -->
+  <path d="M 570 200 L 570 225 Q 570 235 600 235 L 625 235 L 625 250" fill="none" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- FLEETS -> VEHICLES (1:N) -->
+  <path d="M 400 345 L 400 370 Q 400 390 440 390 L 460 390" fill="none" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- DRIVERS -> VEHICLES (0..1:N) -->
+  <path d="M 625 345 L 625 370 Q 625 390 590 390 L 570 390" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#crows-foot)"/>
+
+  <!-- OEMS -> VEHICLE_MODELS (1:N) -->
+  <path d="M 1080 185 L 1080 215 Q 1080 235 940 235 L 890 235 L 890 250" fill="none" stroke="#f59e0b" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- OEMS -> MAPPINGS (1:N) -->
+  <path d="M 1150 185 L 1150 250" fill="none" stroke="#f59e0b" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- VEHICLE_MODELS -> VEHICLES (1:N) -->
+  <path d="M 830 345 L 830 420 Q 830 435 690 435 L 630 435" fill="none" stroke="#94a3b8" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- VEHICLES -> VEHICLE_STATE (1:1) -->
+  <path d="M 515 510 L 515 560" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#one-to-one)"/>
+  <rect x="522" y="525" width="60" height="16" rx="3" fill="#064e3b"/>
+  <text x="552" y="537" font-size="9" fill="#a7f3d0" text-anchor="middle" font-weight="700">1 : 1 CQRS</text>
+
+  <!-- TENANTS -> MAPPINGS (1:N) -->
+  <path d="M 670 120 Q 850 120 1040 270" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- VEHICLES -> RAW_EVENTS (1:N) -->
+  <path d="M 630 460 Q 680 460 730 490" fill="none" stroke="#10b981" stroke-width="1.8" marker-end="url(#crows-foot)"/>
+
+  <!-- RAW_EVENTS -> TELEMETRY_REVISIONS (1:N) -->
+  <path d="M 980 500 L 1050 500" fill="none" stroke="#8b5cf6" stroke-width="1.8" marker-end="url(#crows-foot)"/>
+
+  <!-- MAPPINGS -> TELEMETRY_REVISIONS (1:N) -->
+  <path d="M 1150 365 L 1150 470" fill="none" stroke="#38bdf8" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- RAW_EVENTS -> ALERTS (1:N) -->
+  <path d="M 855 605 L 855 670" fill="none" stroke="#ef4444" stroke-width="1.8" marker-end="url(#crows-foot)"/>
+
+  <!-- RAW_EVENTS -> PROJECTION_OUTBOX (1:N) -->
+  <path d="M 980 575 Q 1015 575 1050 690" fill="none" stroke="#f97316" stroke-width="1.8" marker-end="url(#crows-foot)"/>
+
+  <!-- TENANTS -> REPLAY_JOBS (1:N) -->
+  <path d="M 450 135 L 250 135" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- TENANTS -> AUDIT_LOG (1:N) -->
+  <path d="M 450 150 Q 300 150 250 250" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+  <!-- TENANTS -> ERASURES (1:N) -->
+  <path d="M 450 165 Q 280 165 250 375" fill="none" stroke="#3b82f6" stroke-width="1.6" marker-end="url(#crows-foot)"/>
+
+
+  <!-- ================= ENTITY TABLES ================= -->
+
+  <!-- TENANTS -->
+  <g id="table-tenants">
+    <rect x="450" y="90" width="220" height="110" rx="8" fill="url(#tenantCardGrad)" stroke="#3b82f6" stroke-width="1.8"/>
+    <path d="M 450 90 L 670 90 L 670 120 L 450 120 Z" fill="#1e3a8a"/>
+    <text x="462" y="111" font-size="12" font-weight="700" fill="#ffffff">TENANTS</text>
+    <rect x="618" y="98" width="42" height="14" rx="2" fill="#2563eb"/>
+    <text x="639" y="109" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">Root Org</text>
+    
+    <text x="462" y="140" font-size="10.5" fill="#f8fafc"><tspan fill="#38bdf8" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="462" y="160" font-size="10.5" fill="#cbd5e1">name : VARCHAR(160)</text>
+    <text x="462" y="180" font-size="9" fill="#94a3b8">Isolates fleets, rules, audit &amp; replay</text>
+  </g>
+
+  <!-- OEMS -->
+  <g id="table-oems">
+    <rect x="1050" y="90" width="200" height="95" rx="8" fill="url(#oemCardGrad)" stroke="#f59e0b" stroke-width="1.8"/>
+    <path d="M 1050 90 L 1250 90 L 1250 120 L 1050 120 Z" fill="#78350f"/>
+    <text x="1062" y="111" font-size="12" font-weight="700" fill="#ffffff">OEMS</text>
+    <text x="1062" y="139" font-size="10.5" fill="#f8fafc"><tspan fill="#fbbf24" font-weight="700">PK </tspan>id : VARCHAR(32)</text>
+    <text x="1062" y="157" font-size="10.5" fill="#cbd5e1">name : VARCHAR(100)</text>
+    <text x="1062" y="174" font-size="10" fill="#cbd5e1">color : VARCHAR(20)</text>
+  </g>
+
+  <!-- FLEETS -->
+  <g id="table-fleets">
+    <rect x="300" y="250" width="200" height="95" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <path d="M 300 250 L 500 250 L 500 278 L 300 278 Z" fill="#334155"/>
+    <text x="312" y="270" font-size="12" font-weight="700" fill="#ffffff">FLEETS</text>
+    <text x="312" y="297" font-size="10" fill="#f8fafc"><tspan fill="#38bdf8" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="312" y="314" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id : VARCHAR(64)</text>
+    <text x="312" y="331" font-size="10" fill="#cbd5e1">name, region</text>
+  </g>
+
+  <!-- DRIVERS -->
+  <g id="table-drivers">
+    <rect x="530" y="250" width="190" height="95" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+    <path d="M 530 250 L 720 250 L 720 278 L 530 278 Z" fill="#334155"/>
+    <text x="542" y="270" font-size="12" font-weight="700" fill="#ffffff">DRIVERS</text>
+    <text x="542" y="297" font-size="10" fill="#f8fafc"><tspan fill="#38bdf8" font-weight="700">PK </tspan>id : VARCHAR(200)</text>
+    <text x="542" y="314" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id : VARCHAR(64)</text>
+    <text x="542" y="331" font-size="10" fill="#cbd5e1">name : VARCHAR(80)</text>
+  </g>
+
+  <!-- VEHICLE_MODELS -->
+  <g id="table-models">
+    <rect x="760" y="250" width="220" height="95" rx="8" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <path d="M 760 250 L 980 250 L 980 278 L 760 278 Z" fill="#78350f"/>
+    <text x="772" y="270" font-size="12" font-weight="700" fill="#ffffff">VEHICLE_MODELS</text>
+    <text x="772" y="297" font-size="10" fill="#f8fafc"><tspan fill="#fbbf24" font-weight="700">PK </tspan>id : VARCHAR(140)</text>
+    <text x="772" y="314" font-size="10" fill="#cbd5e1"><tspan fill="#fbbf24" font-weight="700">FK </tspan>oem_id : VARCHAR(32)</text>
+    <text x="772" y="331" font-size="10" fill="#cbd5e1">name, powertrain (EV/ICE)</text>
+  </g>
+
+  <!-- MAPPINGS -->
+  <g id="table-mappings">
+    <rect x="1040" y="250" width="220" height="115" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.8"/>
+    <path d="M 1040 250 L 1260 250 L 1260 278 L 1040 278 Z" fill="#065f46"/>
+    <text x="1052" y="270" font-size="12" font-weight="700" fill="#ffffff">MAPPINGS</text>
+    <text x="1052" y="297" font-size="10" fill="#f8fafc"><tspan fill="#34d399" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="1052" y="313" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id, oem_id</text>
+    <text x="1052" y="329" font-size="10" fill="#cbd5e1">schema_version, version</text>
+    <text x="1052" y="345" font-size="9" fill="#a7f3d0">status, rules (JSON), approved_by</text>
+  </g>
+
+  <!-- VEHICLES -->
+  <g id="table-vehicles">
+    <rect x="390" y="390" width="240" height="120" rx="8" fill="url(#vehicleCardGrad)" stroke="#10b981" stroke-width="2"/>
+    <path d="M 390 390 L 630 390 L 630 420 L 390 420 Z" fill="#064e3b"/>
+    <text x="402" y="411" font-size="13" font-weight="700" fill="#ffffff">VEHICLES</text>
+    <rect x="560" y="398" width="60" height="14" rx="2" fill="#059669"/>
+    <text x="590" y="409" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">Core Asset</text>
+
+    <text x="402" y="439" font-size="10.5" fill="#f8fafc"><tspan fill="#34d399" font-weight="700">PK </tspan>vin : VARCHAR(17)</text>
+    <text x="402" y="457" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id, fleet_id</text>
+    <text x="402" y="474" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>model_id, driver_id</text>
+    <text x="402" y="492" font-size="9.5" fill="#a7f3d0">registration, ix_vehicle_tenant</text>
+  </g>
+
+  <!-- VEHICLE_STATE -->
+  <g id="table-state">
+    <rect x="390" y="560" width="240" height="130" rx="8" fill="url(#vehicleCardGrad)" stroke="#10b981" stroke-width="2"/>
+    <path d="M 390 560 L 630 560 L 630 590 L 390 590 Z" fill="#047857"/>
+    <text x="402" y="581" font-size="12.5" font-weight="700" fill="#ffffff">VEHICLE_STATE</text>
+    <rect x="548" y="568" width="72" height="14" rx="2" fill="#059669"/>
+    <text x="584" y="579" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">CQRS Project</text>
+
+    <text x="402" y="609" font-size="10.5" fill="#f8fafc"><tspan fill="#34d399" font-weight="700">PK/FK </tspan>vin : VARCHAR(17)</text>
+    <text x="402" y="626" font-size="10" fill="#cbd5e1">event_time, event_id, sequence_no</text>
+    <text x="402" y="643" font-size="10" fill="#cbd5e1">speed_kmh, soc_pct, odometer_km</text>
+    <text x="402" y="660" font-size="10" fill="#cbd5e1">latitude, longitude, dtc</text>
+    <text x="402" y="677" font-size="9.5" fill="#6ee7b7">quality (TRUSTED / UNTRUSTED)</text>
+  </g>
+
+  <!-- RAW_EVENTS -->
+  <g id="table-raw-events">
+    <rect x="730" y="470" width="250" height="135" rx="8" fill="url(#eventCardGrad)" stroke="#8b5cf6" stroke-width="2"/>
+    <path d="M 730 470 L 980 470 L 980 500 L 730 500 Z" fill="#581c87"/>
+    <text x="742" y="491" font-size="13" font-weight="700" fill="#ffffff">RAW_EVENTS</text>
+    <rect x="888" y="478" width="82" height="14" rx="2" fill="#7e22ce"/>
+    <text x="929" y="489" font-size="8.5" font-weight="700" fill="#ffffff" text-anchor="middle">Immutable Log</text>
+
+    <text x="742" y="519" font-size="10.5" fill="#f8fafc"><tspan fill="#c084fc" font-weight="700">PK </tspan>(tenant_id, id) : VARCHAR</text>
+    <text x="742" y="536" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>vin, oem_id, schema_version</text>
+    <text x="742" y="553" font-size="10" fill="#cbd5e1">event_time, received_at, sequence_no</text>
+    <text x="742" y="570" font-size="10" fill="#cbd5e1">payload (JSON), normalized</text>
+    <text x="742" y="587" font-size="9.5" fill="#d8b4fe">status (NORMALIZED / QUARANTINED)</text>
+  </g>
+
+  <!-- TELEMETRY_REVISIONS -->
+  <g id="table-revisions">
+    <rect x="1050" y="470" width="230" height="105" rx="8" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.6"/>
+    <path d="M 1050 470 L 1280 470 L 1280 498 L 1050 498 Z" fill="#4c1d95"/>
+    <text x="1062" y="490" font-size="12" font-weight="700" fill="#ffffff">TELEMETRY_REVISIONS</text>
+    <text x="1062" y="517" font-size="10" fill="#f8fafc"><tspan fill="#c084fc" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="1062" y="534" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>(tenant_id, event_id), mapping_id</text>
+    <text x="1062" y="551" font-size="10" fill="#cbd5e1">normalized (re-evaluated signals)</text>
+    <text x="1062" y="567" font-size="9" fill="#ddd6fe">created_at (durable audit of recovery)</text>
+  </g>
+
+  <!-- ALERTS -->
+  <g id="table-alerts">
+    <rect x="730" y="670" width="250" height="115" rx="8" fill="url(#alertCardGrad)" stroke="#ef4444" stroke-width="1.8"/>
+    <path d="M 730 670 L 980 670 L 980 698 L 730 698 Z" fill="#991b1b"/>
+    <text x="742" y="690" font-size="12" font-weight="700" fill="#ffffff">ALERTS</text>
+    <text x="742" y="717" font-size="10" fill="#f8fafc"><tspan fill="#f87171" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="742" y="734" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id, vin, event_id</text>
+    <text x="742" y="751" font-size="10" fill="#cbd5e1">kind (e.g. LOW_BATTERY), severity</text>
+    <text x="742" y="768" font-size="9" fill="#fca5a5">status (OPEN/RESOLVED), assigned_to</text>
+  </g>
+
+  <!-- PROJECTION_OUTBOX -->
+  <g id="table-outbox">
+    <rect x="1050" y="670" width="230" height="115" rx="8" fill="#1e293b" stroke="#f97316" stroke-width="1.8"/>
+    <path d="M 1050 670 L 1280 670 L 1280 698 L 1050 698 Z" fill="#9a3412"/>
+    <text x="1062" y="690" font-size="12" font-weight="700" fill="#ffffff">PROJECTION_OUTBOX</text>
+    <text x="1062" y="717" font-size="10" fill="#f8fafc"><tspan fill="#fb923c" font-weight="700">PK </tspan>id : VARCHAR(180)</text>
+    <text x="1062" y="734" font-size="10" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id, vin</text>
+    <text x="1062" y="751" font-size="10" fill="#cbd5e1">payload (JSON), status, attempts</text>
+    <text x="1062" y="768" font-size="9" fill="#fdba74">available_at, created_at</text>
+  </g>
+
+  <!-- REPLAY_JOBS -->
+  <g id="table-replay">
+    <rect x="60" y="100" width="190" height="95" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <path d="M 60 100 L 250 100 L 250 128 L 60 128 Z" fill="#334155"/>
+    <text x="72" y="120" font-size="11.5" font-weight="700" fill="#ffffff">REPLAY_JOBS</text>
+    <text x="72" y="147" font-size="10" fill="#f8fafc"><tspan fill="#38bdf8" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="72" y="164" font-size="9.5" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id, oem_id</text>
+    <text x="72" y="181" font-size="9" fill="#94a3b8">total, recovered, failed</text>
+  </g>
+
+  <!-- AUDIT_LOG -->
+  <g id="table-audit">
+    <rect x="60" y="225" width="190" height="95" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <path d="M 60 225 L 250 225 L 250 253 L 60 253 Z" fill="#334155"/>
+    <text x="72" y="245" font-size="11.5" font-weight="700" fill="#ffffff">AUDIT_LOG</text>
+    <text x="72" y="272" font-size="10" fill="#f8fafc"><tspan fill="#38bdf8" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="72" y="289" font-size="9.5" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id</text>
+    <text x="72" y="306" font-size="9" fill="#94a3b8">actor, action, resource, detail</text>
+  </g>
+
+  <!-- ERASURES -->
+  <g id="table-erasures">
+    <rect x="60" y="350" width="190" height="95" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <path d="M 60 350 L 250 350 L 250 378 L 60 378 Z" fill="#334155"/>
+    <text x="72" y="370" font-size="11.5" font-weight="700" fill="#ffffff">ERASURES</text>
+    <text x="72" y="397" font-size="10" fill="#f8fafc"><tspan fill="#38bdf8" font-weight="700">PK </tspan>id : VARCHAR(64)</text>
+    <text x="72" y="414" font-size="9.5" fill="#cbd5e1"><tspan fill="#94a3b8" font-weight="700">FK </tspan>tenant_id</text>
+    <text x="72" y="431" font-size="9" fill="#94a3b8">subject_hash, status</text>
+  </g>
+
+  <!-- Footer Legend -->
+  <g transform="translate(60, 890)">
+    <line x1="0" y1="10" x2="30" y2="10" stroke="#94a3b8" stroke-width="2" marker-end="url(#crows-foot)"/>
+    <text x="40" y="14" font-size="11" fill="#94a3b8">1-to-Many Relationship</text>
+
+    <line x1="220" y1="10" x2="250" y2="10" stroke="#10b981" stroke-width="2.5" marker-end="url(#one-to-one)"/>
+    <text x="260" y="14" font-size="11" fill="#94a3b8">1-to-1 CQRS Projection</text>
+
+    <text x="460" y="14" font-size="11" fill="#38bdf8" font-weight="700">PK</text>
+    <text x="480" y="14" font-size="11" fill="#94a3b8">Primary Key</text>
+
+    <text x="580" y="14" font-size="11" fill="#fbbf24" font-weight="700">FK</text>
+    <text x="600" y="14" font-size="11" fill="#94a3b8">Foreign Key Reference</text>
+
+    <text x="780" y="14" font-size="11" fill="#94a3b8">Composite / Tenant-scoped uniqueness enforced</text>
+  </g>
+</svg>

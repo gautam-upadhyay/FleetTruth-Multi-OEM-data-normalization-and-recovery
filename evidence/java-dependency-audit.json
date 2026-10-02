@@ -1,0 +1,2263 @@
+{
+  "recordedAt": "2026-10-02T04:37:07.8528576+05:30",
+  "source": "api-image-audit.json",
+  "imageId": "sha256:3a6dfae7b0c661dd0a3259cdc44974351769f15cb0dd6ab7b99c10d8356e0bd6",
+  "results": [
+    {
+      "Target": "Java",
+      "Class": "lang-pkgs",
+      "Type": "jar",
+      "Packages": [
+        {
+          "Name": "aopalliance:aopalliance",
+          "Identifier": {
+            "PURL": "pkg:maven/aopalliance/aopalliance@1.0",
+            "UID": "a6a48da27bf20a0"
+          },
+          "Version": "1.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/aopalliance-1.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "at.yawk.lz4:lz4-java",
+          "Identifier": {
+            "PURL": "pkg:maven/at.yawk.lz4/lz4-java@1.11.4",
+            "UID": "1f46ffa8d5a88f70"
+          },
+          "Version": "1.11.4",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/lz4-java-1.11.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "ch.qos.logback:logback-classic",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-classic@1.5.34",
+            "UID": "dea5d5b12e6db15d"
+          },
+          "Version": "1.5.34",
+          "Licenses": [
+            "EPL-2.0",
+            "LGPL-2.1-only"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/logback-classic-1.5.34.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "ch.qos.logback:logback-core",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-core@1.5.34",
+            "UID": "f0c838dc7bab2169"
+          },
+          "Version": "1.5.34",
+          "Licenses": [
+            "EPL-2.0",
+            "LGPL-2.1-only"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/logback-core-1.5.34.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.datastax.oss:native-protocol",
+          "Identifier": {
+            "PURL": "pkg:maven/com.datastax.oss/native-protocol@1.5.2",
+            "UID": "7431a4a5ab97876d"
+          },
+          "Version": "1.5.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/native-protocol-1.5.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+            "UID": "63e952e911fda08e"
+          },
+          "Version": "2.21",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jackson-annotations-2.21.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.21.7",
+            "UID": "4960f1d9ba9764c"
+          },
+          "Version": "2.21.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jackson-core-2.21.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.21.7",
+            "UID": "602285abae2f6c9c"
+          },
+          "Version": "2.21.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jackson-databind-2.21.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml.jackson.dataformat:jackson-dataformat-toml",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.dataformat/jackson-dataformat-toml@2.21.7",
+            "UID": "60ac4337594a2fda"
+          },
+          "Version": "2.21.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jackson-dataformat-toml-2.21.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml.jackson.datatype:jackson-datatype-jdk8",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jdk8@2.21.7",
+            "UID": "5a6be642cb3da8db"
+          },
+          "Version": "2.21.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jackson-datatype-jdk8-2.21.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.datatype/jackson-datatype-jsr310@2.21.7",
+            "UID": "18d66365d8aeafd9"
+          },
+          "Version": "2.21.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jackson-datatype-jsr310-2.21.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml.jackson.module:jackson-module-parameter-names",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.module/jackson-module-parameter-names@2.21.7",
+            "UID": "ad7e27bba3110d47"
+          },
+          "Version": "2.21.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jackson-module-parameter-names-2.21.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.fasterxml:classmate",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml/classmate@1.7.3",
+            "UID": "9217b209e483e43e"
+          },
+          "Version": "1.7.3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/classmate-1.7.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.jnr:jffi",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jnr/jffi@1.3.9",
+            "UID": "4969f8a867c4a9f"
+          },
+          "Version": "1.3.9",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jffi-1.3.9-native.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.jnr:jffi",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jnr/jffi@1.3.9",
+            "UID": "1fd76e83a9b76a6e"
+          },
+          "Version": "1.3.9",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jffi-1.3.9.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.jnr:jnr-a64asm",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jnr/jnr-a64asm@1.0.0",
+            "UID": "c0e19d45357eab06"
+          },
+          "Version": "1.0.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jnr-a64asm-1.0.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.jnr:jnr-constants",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jnr/jnr-constants@0.10.3",
+            "UID": "75ea175509a305b0"
+          },
+          "Version": "0.10.3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jnr-constants-0.10.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.jnr:jnr-ffi",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jnr/jnr-ffi@2.2.11",
+            "UID": "44e69a11b46596b7"
+          },
+          "Version": "2.2.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jnr-ffi-2.2.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.jnr:jnr-posix",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jnr/jnr-posix@3.1.15",
+            "UID": "70ef1d3932ce8714"
+          },
+          "Version": "3.1.15",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-only",
+            "LGPL-2.1-only"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jnr-posix-3.1.15.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.jnr:jnr-x86asm",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jnr/jnr-x86asm@1.0.2",
+            "UID": "d5bf30a213ace6b"
+          },
+          "Version": "1.0.2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jnr-x86asm-1.0.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.luben:zstd-jni",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.luben/zstd-jni@1.5.6-4",
+            "UID": "44f47a9c211debe3"
+          },
+          "Version": "1.5.6-4",
+          "Licenses": [
+            "BSD-2-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/zstd-jni-1.5.6-4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.github.stephenc.jcip:jcip-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.stephenc.jcip/jcip-annotations@1.0-1",
+            "UID": "6c409af7a0753cb5"
+          },
+          "Version": "1.0-1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jcip-annotations-1.0-1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.google.code.gson:gson",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.code.gson/gson@2.13.1",
+            "UID": "dcdf48c7cb9b6982"
+          },
+          "Version": "2.13.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/nimbus-jose-jwt-9.37.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.google.j2objc:j2objc-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+            "UID": "375fb29d208c68cc"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/java-driver-guava-shaded-4.19.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.h2database:h2",
+          "Identifier": {
+            "PURL": "pkg:maven/com.h2database/h2@2.3.232",
+            "UID": "fb9e3e2cd4479c1e"
+          },
+          "Version": "2.3.232",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/h2-2.3.232.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.nimbusds:nimbus-jose-jwt",
+          "Identifier": {
+            "PURL": "pkg:maven/com.nimbusds/nimbus-jose-jwt@9.37.4",
+            "UID": "581e7a70ce4d53c3"
+          },
+          "Version": "9.37.4",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/nimbus-jose-jwt-9.37.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.squareup.okhttp3:okhttp-jvm",
+          "Identifier": {
+            "PURL": "pkg:maven/com.squareup.okhttp3/okhttp-jvm@5.3.2",
+            "UID": "ce92c29f4151e29f"
+          },
+          "Version": "5.3.2",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/okhttp-jvm-5.3.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.squareup.okio:okio-jvm",
+          "Identifier": {
+            "PURL": "pkg:maven/com.squareup.okio/okio-jvm@3.16.4",
+            "UID": "38cd9312dd7b11cd"
+          },
+          "Version": "3.16.4",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/okio-jvm-3.16.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.typesafe:config",
+          "Identifier": {
+            "PURL": "pkg:maven/com.typesafe/config@1.4.1",
+            "UID": "6dd6505c80b894a1"
+          },
+          "Version": "1.4.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/config-1.4.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "com.zaxxer:HikariCP",
+          "Identifier": {
+            "PURL": "pkg:maven/com.zaxxer/HikariCP@6.3.3",
+            "UID": "5efffd90f79b5da3"
+          },
+          "Version": "6.3.3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/HikariCP-6.3.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.dropwizard.metrics:metrics-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.dropwizard.metrics/metrics-core@4.1.18",
+            "UID": "730bb21885145633"
+          },
+          "Version": "4.1.18",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/metrics-core-4.1.18.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.fleettruth:fleettruth-api",
+          "Identifier": {
+            "PURL": "pkg:maven/io.fleettruth/fleettruth-api@1.0.0",
+            "UID": "6470067eeeb7c94c"
+          },
+          "Version": "1.0.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.github.resilience4j:resilience4j-circuitbreaker",
+          "Identifier": {
+            "PURL": "pkg:maven/io.github.resilience4j/resilience4j-circuitbreaker@2.4.0",
+            "UID": "f65d63c8fe9df09a"
+          },
+          "Version": "2.4.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/resilience4j-circuitbreaker-2.4.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.github.resilience4j:resilience4j-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.github.resilience4j/resilience4j-core@2.4.0",
+            "UID": "cd13c712f9ad3daf"
+          },
+          "Version": "2.4.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/resilience4j-core-2.4.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.lettuce:lettuce-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.lettuce/lettuce-core@6.6.0.RELEASE",
+            "UID": "223251283b70847a"
+          },
+          "Version": "6.6.0.RELEASE",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/lettuce-core-6.6.0.RELEASE.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:context-propagation",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/context-propagation@1.1.4",
+            "UID": "ad2ad4d53f0260f6"
+          },
+          "Version": "1.1.4",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/context-propagation-1.1.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:micrometer-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-commons@1.15.12",
+            "UID": "aed15b45752c9626"
+          },
+          "Version": "1.15.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/micrometer-commons-1.15.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:micrometer-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-core@1.15.12",
+            "UID": "da99c988216d6123"
+          },
+          "Version": "1.15.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/micrometer-core-1.15.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:micrometer-jakarta9",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-jakarta9@1.15.12",
+            "UID": "4bb713e1a3bd2ce3"
+          },
+          "Version": "1.15.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/micrometer-jakarta9-1.15.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-observation@1.15.12",
+            "UID": "953ab259d46739b7"
+          },
+          "Version": "1.15.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/micrometer-observation-1.15.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:micrometer-registry-prometheus",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.15.12",
+            "UID": "53a0025808fe3287"
+          },
+          "Version": "1.15.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/micrometer-registry-prometheus-1.15.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:micrometer-tracing",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-tracing@1.5.12",
+            "UID": "37d6780f5c465222"
+          },
+          "Version": "1.5.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/micrometer-tracing-1.5.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.micrometer:micrometer-tracing-bridge-otel",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-tracing-bridge-otel@1.5.12",
+            "UID": "f3d7971a6be9f2f7"
+          },
+          "Version": "1.5.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/micrometer-tracing-bridge-otel-1.5.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.netty:netty-buffer",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-buffer@4.1.138.Final",
+            "UID": "dee552e729bb7ea"
+          },
+          "Version": "4.1.138.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-buffer-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.netty:netty-codec",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-codec@4.1.138.Final",
+            "UID": "ff815a80cf7020fd"
+          },
+          "Version": "4.1.138.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-codec-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.netty:netty-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-common@4.1.138.Final",
+            "UID": "b38f6302bd33cee0"
+          },
+          "Version": "4.1.138.Final",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-common-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.netty:netty-handler",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-handler@4.1.138.Final",
+            "UID": "be277b6ebf636497"
+          },
+          "Version": "4.1.138.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-handler-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.netty:netty-resolver",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-resolver@4.1.138.Final",
+            "UID": "bd480b9c3184166"
+          },
+          "Version": "4.1.138.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-resolver-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.netty:netty-transport",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-transport@4.1.138.Final",
+            "UID": "af9f013541d07ed2"
+          },
+          "Version": "4.1.138.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-transport-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.netty:netty-transport-native-unix-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-transport-native-unix-common@4.1.138.Final",
+            "UID": "def6fe8894c01aa8"
+          },
+          "Version": "4.1.138.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-transport-native-unix-common-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry.semconv:opentelemetry-semconv",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry.semconv/opentelemetry-semconv@1.32.0",
+            "UID": "dba54c69de607171"
+          },
+          "Version": "1.32.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-semconv-1.32.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-api",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-api@1.62.0",
+            "UID": "cb9141f7a023aaa9"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-api-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-common@1.62.0",
+            "UID": "6656cb6a5f91cbae"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-common-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-context",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-context@1.62.0",
+            "UID": "6e527700a009a1be"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-context-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-exporter-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-exporter-common@1.62.0",
+            "UID": "7d579f26da64393c"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-exporter-common-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-exporter-otlp",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp@1.62.0",
+            "UID": "b51c6c5d138818e6"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-exporter-otlp-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-exporter-otlp-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-exporter-otlp-common@1.62.0",
+            "UID": "4c7e51336166729d"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-exporter-otlp-common-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-exporter-sender-okhttp",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-exporter-sender-okhttp@1.62.0",
+            "UID": "b696c20d4bc5f4c6"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-exporter-sender-okhttp-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-extension-trace-propagators",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-extension-trace-propagators@1.62.0",
+            "UID": "a89872be0b454216"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-extension-trace-propagators-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-sdk",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-sdk@1.62.0",
+            "UID": "583f334c28aec0b7"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-sdk-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-sdk-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-sdk-common@1.62.0",
+            "UID": "118d78f7a65a32e8"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-sdk-common-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-sdk-extension-autoconfigure-spi",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi@1.62.0",
+            "UID": "1e99df9da1ff4b21"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-sdk-extension-autoconfigure-spi-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-sdk-logs",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-sdk-logs@1.62.0",
+            "UID": "50a0503d58013bd3"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-sdk-logs-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-sdk-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-sdk-metrics@1.62.0",
+            "UID": "f1b151ea3c4b488b"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-sdk-metrics-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.opentelemetry:opentelemetry-sdk-trace",
+          "Identifier": {
+            "PURL": "pkg:maven/io.opentelemetry/opentelemetry-sdk-trace@1.62.0",
+            "UID": "b71ae625f14880f0"
+          },
+          "Version": "1.62.0",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/opentelemetry-sdk-trace-1.62.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.projectreactor:reactor-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.projectreactor/reactor-core@3.7.19",
+            "UID": "eea654a921ed06a4"
+          },
+          "Version": "3.7.19",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/reactor-core-3.7.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.prometheus:prometheus-metrics-config",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-config@1.3.10",
+            "UID": "73c436c39c8a3180"
+          },
+          "Version": "1.3.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/prometheus-metrics-config-1.3.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.prometheus:prometheus-metrics-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-core@1.3.10",
+            "UID": "336ca3c39dd22205"
+          },
+          "Version": "1.3.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/prometheus-metrics-core-1.3.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.prometheus:prometheus-metrics-exposition-formats",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-exposition-formats@1.3.10",
+            "UID": "7c468e3da9a7ab16"
+          },
+          "Version": "1.3.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/prometheus-metrics-exposition-formats-1.3.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.prometheus:prometheus-metrics-exposition-textformats",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-exposition-textformats@1.3.10",
+            "UID": "77baa02545a76a07"
+          },
+          "Version": "1.3.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/prometheus-metrics-exposition-textformats-1.3.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.prometheus:prometheus-metrics-model",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-model@1.3.10",
+            "UID": "94a2aeab02ade1b5"
+          },
+          "Version": "1.3.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/prometheus-metrics-model-1.3.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "io.prometheus:prometheus-metrics-tracer-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-tracer-common@1.3.10",
+            "UID": "30a775fba5eacac4"
+          },
+          "Version": "1.3.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/prometheus-metrics-tracer-common-1.3.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "jakarta.activation:jakarta.activation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+            "UID": "6adb64df159ea0f9"
+          },
+          "Version": "2.1.4",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jakarta.activation-api-2.1.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+            "UID": "e3081e68c3f22fe6"
+          },
+          "Version": "2.1.1",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jakarta.annotation-api-2.1.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "jakarta.validation:jakarta.validation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.validation/jakarta.validation-api@3.0.2",
+            "UID": "d1686f441bfb3de2"
+          },
+          "Version": "3.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jakarta.validation-api-3.0.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "jakarta.xml.bind:jakarta.xml.bind-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+            "UID": "9472e6288937cce5"
+          },
+          "Version": "4.0.5",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jakarta.xml.bind-api-4.0.5.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.cassandra:java-driver-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.cassandra/java-driver-core@4.19.3",
+            "UID": "b354e56e220c07f5"
+          },
+          "Version": "4.19.3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/java-driver-core-4.19.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.cassandra:java-driver-guava-shaded",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.cassandra/java-driver-guava-shaded@4.19.3",
+            "UID": "d4018bf6f950b99a"
+          },
+          "Version": "4.19.3",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/java-driver-guava-shaded-4.19.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.kafka:kafka-clients",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.kafka/kafka-clients@3.9.2",
+            "UID": "c1df0058afbfde1c"
+          },
+          "Version": "3.9.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/kafka-clients-3.9.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "ac302f7f486be7b"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/log4j-api-2.25.5.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "4dea70b92dd74466"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@10.1.60",
+            "UID": "777cd34fe03fc239"
+          },
+          "Version": "10.1.60",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/tomcat-embed-core-10.1.60.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.tomcat.embed:tomcat-embed-el",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@10.1.60",
+            "UID": "e8128776887a7b8f"
+          },
+          "Version": "10.1.60",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/tomcat-embed-el-10.1.60.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@10.1.60",
+            "UID": "a91274cf2518b907"
+          },
+          "Version": "10.1.60",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/tomcat-embed-websocket-10.1.60.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+            "UID": "cedcc8ce45dbbc3a"
+          },
+          "Version": "3.55.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/checker-qual-3.55.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.flywaydb:flyway-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.flywaydb/flyway-core@11.7.2",
+            "UID": "56fe37ec2ddf4dd4"
+          },
+          "Version": "11.7.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/flyway-core-11.7.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.flywaydb:flyway-database-postgresql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.flywaydb/flyway-database-postgresql@11.7.2",
+            "UID": "286b8d39645350fa"
+          },
+          "Version": "11.7.2",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/flyway-database-postgresql-11.7.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.hdrhistogram:HdrHistogram",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hdrhistogram/HdrHistogram@2.1.12",
+            "UID": "c01413763293c51f"
+          },
+          "Version": "2.1.12",
+          "Licenses": [
+            "CC0-1.0",
+            "BSD-2-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/HdrHistogram-2.1.12.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.hibernate.validator:hibernate-validator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate.validator/hibernate-validator@8.0.3.Final",
+            "UID": "ce6e7db7dfef91b4"
+          },
+          "Version": "8.0.3.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/hibernate-validator-8.0.3.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.jboss.logging:jboss-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final",
+            "UID": "3bb584562137027b"
+          },
+          "Version": "3.6.3.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jboss-logging-3.6.3.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.jctools:jctools-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jctools/jctools-core@4.0.5",
+            "UID": "215114c1122e57be"
+          },
+          "Version": "4.0.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/netty-common-4.1.138.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.jetbrains.kotlin:kotlin-stdlib",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jetbrains.kotlin/kotlin-stdlib@1.9.25",
+            "UID": "53cd4637f64bde89"
+          },
+          "Version": "1.9.25",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/kotlin-stdlib-1.9.25.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.jetbrains:annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jetbrains/annotations@13.0",
+            "UID": "3f694e7e0741d22f"
+          },
+          "Version": "13.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/annotations-13.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.latencyutils:LatencyUtils",
+          "Identifier": {
+            "PURL": "pkg:maven/org.latencyutils/LatencyUtils@2.0.3",
+            "UID": "c529f7a20023fda7"
+          },
+          "Version": "2.0.3",
+          "Licenses": [
+            "CC0-1.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/LatencyUtils-2.0.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.ow2.asm:asm",
+          "Identifier": {
+            "PURL": "pkg:maven/org.ow2.asm/asm@9.2",
+            "UID": "a6e7e3be36d6b4ed"
+          },
+          "Version": "9.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/asm-9.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.ow2.asm:asm-analysis",
+          "Identifier": {
+            "PURL": "pkg:maven/org.ow2.asm/asm-analysis@9.2",
+            "UID": "fc58407d1c2dc56e"
+          },
+          "Version": "9.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/asm-analysis-9.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.ow2.asm:asm-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.ow2.asm/asm-commons@9.2",
+            "UID": "af56202370f05034"
+          },
+          "Version": "9.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/asm-commons-9.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.ow2.asm:asm-tree",
+          "Identifier": {
+            "PURL": "pkg:maven/org.ow2.asm/asm-tree@9.2",
+            "UID": "76a075cc3a71a257"
+          },
+          "Version": "9.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/asm-tree-9.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.ow2.asm:asm-util",
+          "Identifier": {
+            "PURL": "pkg:maven/org.ow2.asm/asm-util@9.2",
+            "UID": "19a3c78f9a396a3"
+          },
+          "Version": "9.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/asm-util-9.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.postgresql:postgresql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.postgresql/postgresql@42.7.13",
+            "UID": "d40eaa533819e68"
+          },
+          "Version": "42.7.13",
+          "Licenses": [
+            "BSD-2-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/postgresql-42.7.13.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.reactivestreams:reactive-streams",
+          "Identifier": {
+            "PURL": "pkg:maven/org.reactivestreams/reactive-streams@1.0.4",
+            "UID": "147ae6dd5080fbeb"
+          },
+          "Version": "1.0.4",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/reactive-streams-1.0.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.slf4j:jul-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.18",
+            "UID": "ebd626525478b14c"
+          },
+          "Version": "2.0.18",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/jul-to-slf4j-2.0.18.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+            "UID": "812eee7a360ac85f"
+          },
+          "Version": "2.0.18",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/slf4j-api-2.0.18.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot@3.5.16",
+            "UID": "9258f1fc54c45f61"
+          },
+          "Version": "3.5.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-boot-3.5.16.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator@3.5.16",
+            "UID": "3dcbcbc5bfdda533"
+          },
+          "Version": "3.5.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-boot-actuator-3.5.16.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@3.5.16",
+            "UID": "776a84b574907dba"
+          },
+          "Version": "3.5.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-boot-actuator-autoconfigure-3.5.16.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@3.5.16",
+            "UID": "a8fbc3fc551a587c"
+          },
+          "Version": "3.5.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-boot-autoconfigure-3.5.16.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-jarmode-tools",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@3.5.16",
+            "UID": "7a8220aaa7c73d06"
+          },
+          "Version": "3.5.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-boot-jarmode-tools-3.5.16.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.data:spring-data-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.data/spring-data-commons@3.5.13",
+            "UID": "de5d77294831f20d"
+          },
+          "Version": "3.5.13",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-data-commons-3.5.13.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.data:spring-data-keyvalue",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.data/spring-data-keyvalue@3.5.13",
+            "UID": "48d730c1c7b0147e"
+          },
+          "Version": "3.5.13",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-data-keyvalue-3.5.13.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.data:spring-data-redis",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.data/spring-data-redis@3.5.13",
+            "UID": "33c58c4c49273024"
+          },
+          "Version": "3.5.13",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-data-redis-3.5.13.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.kafka:spring-kafka",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.kafka/spring-kafka@3.3.16",
+            "UID": "79f4ad56ccb2c00b"
+          },
+          "Version": "3.3.16",
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-kafka-3.3.16.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.retry:spring-retry",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.retry/spring-retry@2.0.13",
+            "UID": "16cc1f2e219174cb"
+          },
+          "Version": "2.0.13",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-retry-2.0.13.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-config",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-config@6.5.11",
+            "UID": "d355217c8a477b8d"
+          },
+          "Version": "6.5.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-security-config-6.5.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-core@6.5.11",
+            "UID": "ecbeba910d7f6e9d"
+          },
+          "Version": "6.5.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-security-core-6.5.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-crypto",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-crypto@6.5.11",
+            "UID": "5e4010549ceae7ef"
+          },
+          "Version": "6.5.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-security-crypto-6.5.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-oauth2-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-oauth2-core@6.5.11",
+            "UID": "a958f61c7629517d"
+          },
+          "Version": "6.5.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-security-oauth2-core-6.5.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-oauth2-jose",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-oauth2-jose@6.5.11",
+            "UID": "f9a72333572c87d2"
+          },
+          "Version": "6.5.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-security-oauth2-jose-6.5.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-oauth2-resource-server",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-oauth2-resource-server@6.5.11",
+            "UID": "136bc0752a803e95"
+          },
+          "Version": "6.5.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-security-oauth2-resource-server-6.5.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-web@6.5.11",
+            "UID": "1d7c8d9eb5cb58e"
+          },
+          "Version": "6.5.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-security-web-6.5.11.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-aop",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-aop@6.2.19",
+            "UID": "ddf06776315a8e12"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-aop-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-beans",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-beans@6.2.19",
+            "UID": "cd535a238435a732"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-beans-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-context",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context@6.2.19",
+            "UID": "2a9f3eac641b52ea"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-context-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-context-support",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context-support@6.2.19",
+            "UID": "e41f0454a9db3c08"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-context-support-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-core@6.2.19",
+            "UID": "5b096c101da21779"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-core-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-expression",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-expression@6.2.19",
+            "UID": "4fdd634dd67b8845"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-expression-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-jcl",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-jcl@6.2.19",
+            "UID": "dbf19be783edd23e"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-jcl-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-jdbc@6.2.19",
+            "UID": "d2d9a8317e3c0bcf"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-jdbc-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-messaging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-messaging@6.2.19",
+            "UID": "c316b55dc079c472"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-messaging-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-oxm",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-oxm@6.2.19",
+            "UID": "53fa604ad9f47a13"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-oxm-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-tx",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-tx@6.2.19",
+            "UID": "5847da168c7e7eef"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-tx-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-web@6.2.19",
+            "UID": "83a92dccad73d54f"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-web-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework:spring-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-webmvc@6.2.19",
+            "UID": "1651fca15e1b4564"
+          },
+          "Version": "6.2.19",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/spring-webmvc-6.2.19.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.xerial.snappy:snappy-java",
+          "Identifier": {
+            "PURL": "pkg:maven/org.xerial.snappy/snappy-java@1.1.10.5",
+            "UID": "4d510e6b205b386b"
+          },
+          "Version": "1.1.10.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/snappy-java-1.1.10.5.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.yaml:snakeyaml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.yaml/snakeyaml@2.4",
+            "UID": "ef3c2a2556b07b0a"
+          },
+          "Version": "2.4",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/snakeyaml-2.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "redis.clients.authentication:redis-authx-core",
+          "Identifier": {
+            "PURL": "pkg:maven/redis.clients.authentication/redis-authx-core@0.1.1-beta2",
+            "UID": "aadfbe366d8e71b0"
+          },
+          "Version": "0.1.1-beta2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "Digest": "sha256:1ea6cecbc6e365939ed68a3afde72da89048482c7144d474a3e30ef0929274d9",
+            "DiffID": "sha256:c1812d78ec45c304fc87c217c6fc9a46ab7c8b3b09f0e421ee4e85f421c37d66"
+          },
+          "FilePath": "app/app.jar/BOOT-INF/lib/redis-authx-core-0.1.1-beta2.jar",
+          "AnalyzedBy": "jar"
+        }
+      ]
+    }
+  ],
+  "scope": "Java package inventory and findings extracted from the actual Trivy application-image scan"
+}

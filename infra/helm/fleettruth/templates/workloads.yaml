@@ -1,0 +1,79 @@
+{{- range $name := list "api" "web" }}
+{{- $component := index $.Values $name }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $name }}
+  labels: {app.kubernetes.io/name: fleettruth, app.kubernetes.io/component: {{ $name }}}
+spec:
+  replicas: {{ $component.replicas }}
+  strategy:
+    rollingUpdate: {maxUnavailable: 0, maxSurge: 1}
+  selector:
+    matchLabels: {app: fleettruth, component: {{ $name }}}
+  template:
+    metadata:
+      labels: {app: fleettruth, component: {{ $name }}}
+    spec:
+      automountServiceAccountToken: false
+      securityContext: {runAsNonRoot: true, seccompProfile: {type: RuntimeDefault}}
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes.io/hostname
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels: {app: fleettruth, component: {{ $name }}}
+      containers:
+        - name: {{ $name }}
+          image: {{ $component.image | quote }}
+          imagePullPolicy: IfNotPresent
+          ports: [{containerPort: 8080, name: http}]
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+          resources: {{- toYaml $component.resources | nindent 12 }}
+          {{- if eq $name "api" }}
+          envFrom:
+            - secretRef: {name: {{ required "api.existingSecret is required" $.Values.api.existingSecret }}}
+          env:
+            - {name: SPRING_PROFILES_ACTIVE, value: production}
+            - {name: BIND_ADDRESS, value: 0.0.0.0}
+            - {name: SEED_DATA, value: 'false'}
+            - {name: SIMULATION_ENABLED, value: 'false'}
+            - {name: KAFKA_ENABLED, value: 'true'}
+            - {name: REDIS_ENABLED, value: 'true'}
+            - {name: VECTOR_ENABLED, value: 'true'}
+          startupProbe:
+            httpGet: {path: /actuator/health/readiness, port: http}
+            failureThreshold: 60
+            periodSeconds: 5
+          readinessProbe:
+            httpGet: {path: /actuator/health/readiness, port: http}
+          livenessProbe:
+            httpGet: {path: /actuator/health/liveness, port: http}
+          {{- else }}
+          readinessProbe:
+            httpGet: {path: /, port: http}
+          livenessProbe:
+            httpGet: {path: /, port: http}
+          {{- end }}
+          volumeMounts: [{name: temp, mountPath: /tmp}]
+      volumes: [{name: temp, emptyDir: {}}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: {{ $name }}}
+spec:
+  selector: {app: fleettruth, component: {{ $name }}}
+  ports: [{name: http, port: 8080, targetPort: http}]
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: {{ $name }}}
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels: {app: fleettruth, component: {{ $name }}}
+{{- end }}

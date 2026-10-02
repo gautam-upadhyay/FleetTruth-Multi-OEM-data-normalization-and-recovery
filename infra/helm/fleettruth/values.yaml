@@ -1,0 +1,25 @@
+api:
+  image: fleettruth-api:1.0.0
+  replicas: 2
+  existingSecret: fleettruth-runtime
+  resources:
+    requests: {cpu: 500m, memory: 1Gi}
+    limits: {cpu: '2', memory: 2Gi}
+web:
+  image: fleettruth-web:1.0.0
+  replicas: 2
+  resources:
+    requests: {cpu: 100m, memory: 64Mi}
+    limits: {cpu: 500m, memory: 128Mi}
+autoscaling:
+  enabled: true
+  maxReplicas: 8
+ingress:
+  enabled: false
+  className: nginx
+  host: fleettruth.example.invalid
+  tlsSecret: fleettruth-tls
+networkPolicy:
+  enabled: true
+  # Set exact database, broker, cache and identity-provider network CIDRs.
+  externalCidrs: []

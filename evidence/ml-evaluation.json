@@ -1,0 +1,70 @@
+{
+  "dataset": "synthetic fault injection with held-out seed and lower test severity",
+  "trainingSamples": 8000,
+  "testSamples": 2400,
+  "model": {
+    "0": {
+      "precision": 0.963258785942492,
+      "recall": 1.0,
+      "f1-score": 0.9812855980471928,
+      "support": 1206.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 0.9614740368509213,
+      "f1-score": 0.9803586678052946,
+      "support": 1194.0
+    },
+    "accuracy": 0.9808333333333333,
+    "macro avg": {
+      "precision": 0.9816293929712461,
+      "recall": 0.9807370184254607,
+      "f1-score": 0.9808221329262437,
+      "support": 2400.0
+    },
+    "weighted avg": {
+      "precision": 0.9815375399361023,
+      "recall": 0.9808333333333333,
+      "f1-score": 0.9808244502518484,
+      "support": 2400.0
+    }
+  },
+  "baseline": {
+    "0": {
+      "precision": 0.6511879049676026,
+      "recall": 1.0,
+      "f1-score": 0.788750817527796,
+      "support": 1206.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 0.45896147403685095,
+      "f1-score": 0.6291618828932262,
+      "support": 1194.0
+    },
+    "accuracy": 0.7308333333333333,
+    "macro avg": {
+      "precision": 0.8255939524838013,
+      "recall": 0.7294807370184255,
+      "f1-score": 0.7089563502105111,
+      "support": 2400.0
+    },
+    "weighted avg": {
+      "precision": 0.8247219222462202,
+      "recall": 0.7308333333333333,
+      "f1-score": 0.7093553225470974,
+      "support": 2400.0
+    }
+  },
+  "confusionMatrix": [
+    [
+      1206,
+      0
+    ],
+    [
+      46,
+      1148
+    ]
+  ],
+  "limitation": "Synthetic evaluation does not establish accuracy on real OEM data. The model is advisory and cannot approve mappings."
+}

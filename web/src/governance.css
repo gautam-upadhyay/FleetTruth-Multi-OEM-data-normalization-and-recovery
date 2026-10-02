@@ -1,0 +1,58 @@
+/* Governance panels share the workspace's semantic theme tokens. */
+.drift-panel,
+.privacy-panel {
+  margin-top: 20px;
+}
+
+.model-disclosure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.model-disclosure svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.privacy-field {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.privacy-field input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+}
+.privacy-field input::placeholder {
+  color: var(--text-muted);
+}
+
+.button.danger {
+  background: var(--red-bg);
+  color: var(--red);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+.button.danger:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.22);
+  border-color: var(--red);
+}
+
+@media (max-width: 760px) {
+  .privacy-panel .section-title {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

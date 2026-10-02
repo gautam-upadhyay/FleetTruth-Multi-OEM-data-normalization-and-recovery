@@ -1,0 +1,334 @@
+{
+  "recordedAt": "2026-10-01T23:19:19.555665+00:00",
+  "backend": {
+    "tests": 63,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 63
+  },
+  "suites": [
+    {
+      "name": "io.fleettruth.AcceptanceTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.AcceptanceTest.xml",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.IntelligenceTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.IntelligenceTest.xml",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.NormalizerTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.NormalizerTest.xml",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.PostgresIntegrationTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.PostgresIntegrationTest.xml",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.ProjectionCircuitsTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.ProjectionCircuitsTest.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.QueryPlanTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.QueryPlanTest.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.WorkflowTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.WorkflowTest.xml",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.WorkspaceContractTest",
+      "report": "api\\target\\surefire-reports\\TEST-io.fleettruth.WorkspaceContractTest.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.CassandraProjectionIT",
+      "report": "api\\target\\failsafe-reports\\TEST-io.fleettruth.CassandraProjectionIT.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "io.fleettruth.WorkspaceContractIT",
+      "report": "api\\target\\failsafe-reports\\TEST-io.fleettruth.WorkspaceContractIT.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "criticalCoverageGate": {
+    "minimumPercent": 80,
+    "counters": [
+      "instructionPercent",
+      "linePercent"
+    ],
+    "classes": [
+      "io.fleettruth.domain.Normalizer",
+      "io.fleettruth.domain.VinValidator",
+      "io.fleettruth.service.AssistantService",
+      "io.fleettruth.service.DriftModel",
+      "io.fleettruth.service.FleetService",
+      "io.fleettruth.service.PrivacyService",
+      "io.fleettruth.service.ProjectionCircuits",
+      "io.fleettruth.service.ReplayWorker",
+      "io.fleettruth.service.StorageProjection",
+      "io.fleettruth.service.TelemetryRollups"
+    ],
+    "missing": [],
+    "belowThreshold": [],
+    "passed": true
+  },
+  "coverage": [
+    {
+      "class": "io.fleettruth.config.SecurityConfig.new OncePerRequestFilter() {...}",
+      "instructionPercent": 72.97,
+      "linePercent": 72.0,
+      "branchPercent": 62.5
+    },
+    {
+      "class": "io.fleettruth.config.KafkaPipeline",
+      "instructionPercent": 91.11,
+      "linePercent": 97.37,
+      "branchPercent": 33.33
+    },
+    {
+      "class": "io.fleettruth.config.SecurityConfig.1.Window",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.config.SecurityConfig",
+      "instructionPercent": 75.57,
+      "linePercent": 87.27,
+      "branchPercent": 31.82
+    },
+    {
+      "class": "io.fleettruth.config.TransactionConfig",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.domain.Normalizer",
+      "instructionPercent": 92.77,
+      "linePercent": 91.87,
+      "branchPercent": 82.95
+    },
+    {
+      "class": "io.fleettruth.domain.Telemetry.Result",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.domain.VinValidator",
+      "instructionPercent": 98.05,
+      "linePercent": 95.65,
+      "branchPercent": 91.67
+    },
+    {
+      "class": "io.fleettruth.domain.Telemetry.Event",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.domain.Telemetry.Rule",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.domain.Telemetry.Mapping",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.domain.Telemetry.Normalized",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.domain.Telemetry.Intake",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.api.AuthController",
+      "instructionPercent": 85.94,
+      "linePercent": 91.67,
+      "branchPercent": 53.85
+    },
+    {
+      "class": "io.fleettruth.api.Errors",
+      "instructionPercent": 93.33,
+      "linePercent": 100.0,
+      "branchPercent": 50.0
+    },
+    {
+      "class": "io.fleettruth.api.FleetController.MappingRequest",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.api.FleetController",
+      "instructionPercent": 84.48,
+      "linePercent": 88.12,
+      "branchPercent": 64.29
+    },
+    {
+      "class": "io.fleettruth.api.AuthController.Login",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.service.FleetService",
+      "instructionPercent": 96.95,
+      "linePercent": 96.57,
+      "branchPercent": 80.88
+    },
+    {
+      "class": "io.fleettruth.service.ReplayWorker",
+      "instructionPercent": 98.84,
+      "linePercent": 95.12,
+      "branchPercent": 71.43
+    },
+    {
+      "class": "io.fleettruth.service.LoadGenerator",
+      "instructionPercent": 0.0,
+      "linePercent": 0.0,
+      "branchPercent": 0.0
+    },
+    {
+      "class": "io.fleettruth.service.EventIntake.Envelope",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.service.StorageProjection",
+      "instructionPercent": 84.19,
+      "linePercent": 84.85,
+      "branchPercent": 91.67
+    },
+    {
+      "class": "io.fleettruth.service.PrivacyService",
+      "instructionPercent": 93.59,
+      "linePercent": 93.55,
+      "branchPercent": 50.0
+    },
+    {
+      "class": "io.fleettruth.service.FleetService.new TypeReference() {...}",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.service.AssistantService",
+      "instructionPercent": 98.84,
+      "linePercent": 98.8,
+      "branchPercent": 81.25
+    },
+    {
+      "class": "io.fleettruth.service.KnowledgeService.Note",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.service.KnowledgeService",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": 91.67
+    },
+    {
+      "class": "io.fleettruth.service.DriftModel",
+      "instructionPercent": 95.53,
+      "linePercent": 97.01,
+      "branchPercent": 77.27
+    },
+    {
+      "class": "io.fleettruth.service.TelemetryRollups",
+      "instructionPercent": 98.39,
+      "linePercent": 100.0,
+      "branchPercent": 87.5
+    },
+    {
+      "class": "io.fleettruth.service.StorageProjection.Accepted",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.service.Simulator",
+      "instructionPercent": 93.74,
+      "linePercent": 90.56,
+      "branchPercent": 75.31
+    },
+    {
+      "class": "io.fleettruth.service.EventIntake",
+      "instructionPercent": 76.6,
+      "linePercent": 73.91,
+      "branchPercent": 75.0
+    },
+    {
+      "class": "io.fleettruth.service.ProjectionCircuits",
+      "instructionPercent": 95.33,
+      "linePercent": 100.0,
+      "branchPercent": 100.0
+    },
+    {
+      "class": "io.fleettruth.service.DriftModel.Parameters",
+      "instructionPercent": 100.0,
+      "linePercent": 100.0,
+      "branchPercent": null
+    },
+    {
+      "class": "io.fleettruth.FleetTruthApplication",
+      "instructionPercent": 20.0,
+      "linePercent": 16.67,
+      "branchPercent": 0.0
+    }
+  ],
+  "containerTests": "See individual PostgreSQL and Cassandra suites; skipped tests are not passes",
+  "scaleTargets": "100K/s sustained, 300K/s burst and billion-row historical runs have not been validated locally"
+}

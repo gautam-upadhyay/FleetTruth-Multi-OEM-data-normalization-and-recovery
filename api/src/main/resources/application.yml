@@ -1,0 +1,92 @@
+server:
+  port: ${PORT:8080}
+  address: ${BIND_ADDRESS:127.0.0.1}
+  error:
+    include-message: never
+spring:
+  application:
+    name: fleettruth
+  profiles:
+    default: local
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:file:./.runtime/fleettruth;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH}
+    username: ${DATABASE_USER:sa}
+    password: ${DATABASE_PASSWORD:}
+    hikari:
+      maximum-pool-size: 12
+  flyway:
+    enabled: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      properties:
+        enable.idempotence: true
+        compression.type: lz4
+    consumer:
+      group-id: fleettruth-normalizer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      connect-timeout: 2s
+      timeout: 2s
+fleettruth:
+  seed: ${SEED_DATA:true}
+  simulation: ${SIMULATION_ENABLED:true}
+  kafka: ${KAFKA_ENABLED:false}
+  redis: ${REDIS_ENABLED:false}
+  cassandra: ${CASSANDRA_ENABLED:false}
+  vector: ${VECTOR_ENABLED:false}
+  cassandra-host: ${CASSANDRA_HOST:localhost}
+  kafka-partitions: ${KAFKA_PARTITIONS:12}
+  kafka-replicas: ${KAFKA_REPLICAS:1}
+  vehicles: ${SEED_VEHICLES:100000}
+  jwt-secret: ${JWT_SECRET:}
+  oidc-issuer: ${OIDC_ISSUER:}
+  oidc-client-id: ${OIDC_CLIENT_ID:fleettruth-web}
+  oidc-audience: ${OIDC_AUDIENCE:fleettruth-api}
+  assistant-url: ${ASSISTANT_URL:}
+management:
+  tracing:
+    sampling:
+      probability: ${TRACING_SAMPLE_RATE:0.1}
+  otlp:
+    tracing:
+      endpoint: ${OTLP_ENDPOINT:http://127.0.0.1:4318/v1/traces}
+      export:
+        enabled: ${TRACING_ENABLED:false}
+  health:
+    redis:
+      enabled: ${REDIS_ENABLED:false}
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    health:
+      show-details: when_authorized
+      probes:
+        enabled: true
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http.server.requests: true
+logging:
+  structured:
+    format:
+      console: ${FLEETTRUTH_LOG_FORMAT:ecs}
+  level:
+    root: INFO
+    org.apache.kafka: WARN

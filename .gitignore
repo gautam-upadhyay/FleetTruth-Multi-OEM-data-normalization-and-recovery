@@ -1,0 +1,92 @@
+# Credentials and local configuration (sanitized examples may be committed).
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+credentials.json
+service-account*.json
+
+# Installed dependencies and build output. Keep dependency lock files.
+node_modules/
+dist/
+target/
+build/
+*.tsbuildinfo
+*.class
+*.py[cod]
+__pycache__/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+*.egg-info/
+
+# Local services, databases, logs, and scratch files.
+.runtime/
+.cache/
+/tmp/
+*.log
+*.pid
+*.hprof
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.sqlite3-*
+dump.rdb
+appendonly.aof*
+
+# Raw test reports and browser traces may contain session tokens.
+# Keep curated, sanitized results in evidence/.
+test-results/
+playwright-report/
+blob-report/
+
+# Terraform state and local variable files can contain credentials.
+# Keep .terraform.lock.hcl and Terraform source files.
+.terraform/
+*.tfstate*
+*.tfvars
+*.tfvars.json
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Submission packages, duplicate extracted code, and video recordings.
+# Upload the PDF and video separately to the submission Drive folder.
+/artifacts/submission/
+/artifacts/demo/raw/
+*.webm
+*.mp4
+*.mov
+*.zip
+
+# Machine-specific editor and operating-system files.
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini

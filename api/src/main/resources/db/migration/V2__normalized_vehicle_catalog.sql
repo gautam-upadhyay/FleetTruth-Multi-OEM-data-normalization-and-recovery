@@ -1,0 +1,12 @@
+CREATE TABLE drivers (id VARCHAR(200) PRIMARY KEY, tenant_id VARCHAR(64) NOT NULL REFERENCES tenants(id), name VARCHAR(80) NOT NULL);
+CREATE TABLE vehicle_models (id VARCHAR(140) PRIMARY KEY, oem_id VARCHAR(32) NOT NULL REFERENCES oems(id), name VARCHAR(80) NOT NULL, powertrain VARCHAR(16) NOT NULL);
+INSERT INTO drivers SELECT DISTINCT tenant_id || ':' || driver_name,tenant_id,driver_name FROM vehicles;
+INSERT INTO vehicle_models SELECT DISTINCT oem_id || ':' || model,oem_id,model,powertrain FROM vehicles;
+ALTER TABLE vehicles ADD COLUMN model_id VARCHAR(140) REFERENCES vehicle_models(id);
+ALTER TABLE vehicles ADD COLUMN driver_id VARCHAR(200) REFERENCES drivers(id);
+UPDATE vehicles SET model_id=oem_id || ':' || model,driver_id=tenant_id || ':' || driver_name;
+ALTER TABLE vehicles DROP COLUMN oem_id;
+ALTER TABLE vehicles DROP COLUMN model;
+ALTER TABLE vehicles DROP COLUMN driver_name;
+ALTER TABLE vehicles DROP COLUMN powertrain;
+CREATE VIEW vehicle_catalog AS SELECT v.*,m.oem_id,m.name AS model,m.powertrain,d.name AS driver_name FROM vehicles v JOIN vehicle_models m ON v.model_id=m.id LEFT JOIN drivers d ON v.driver_id=d.id;

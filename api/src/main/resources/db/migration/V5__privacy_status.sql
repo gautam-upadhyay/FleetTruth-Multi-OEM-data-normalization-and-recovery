@@ -1,0 +1,1 @@
+ALTER TABLE erasures ALTER COLUMN status TYPE VARCHAR(40);

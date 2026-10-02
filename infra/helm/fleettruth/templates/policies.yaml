@@ -1,0 +1,65 @@
+{{- if .Values.autoscaling.enabled }}
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata: {name: api}
+spec:
+  scaleTargetRef: {apiVersion: apps/v1, kind: Deployment, name: api}
+  minReplicas: {{ .Values.api.replicas }}
+  maxReplicas: {{ .Values.autoscaling.maxReplicas }}
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target: {type: Utilization, averageUtilization: 65}
+{{- end }}
+{{- if .Values.ingress.enabled }}
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fleettruth
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: 'true'
+spec:
+  ingressClassName: {{ .Values.ingress.className }}
+  tls:
+    - hosts: [{{ .Values.ingress.host | quote }}]
+      secretName: {{ .Values.ingress.tlsSecret }}
+  rules:
+    - host: {{ .Values.ingress.host | quote }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service: {name: web, port: {number: 8080}}
+{{- end }}
+{{- if .Values.networkPolicy.enabled }}
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: fleettruth}
+spec:
+  podSelector:
+    matchLabels: {app: fleettruth}
+  policyTypes: [Ingress, Egress]
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels: {app: fleettruth}
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: ingress-nginx}
+      ports: [{protocol: TCP, port: 8080}]
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels: {kubernetes.io/metadata.name: kube-system}
+      ports: [{protocol: UDP, port: 53}, {protocol: TCP, port: 53}]
+    - to:
+        - podSelector:
+            matchLabels: {app: fleettruth}
+    {{- range .Values.networkPolicy.externalCidrs }}
+    - to: [{ipBlock: {cidr: {{ . | quote }}}}]
+      ports: [{protocol: TCP, port: 443}, {protocol: TCP, port: 5432}, {protocol: TCP, port: 9093}, {protocol: TCP, port: 6379}, {protocol: TCP, port: 9042}]
+    {{- end }}
+{{- end }}

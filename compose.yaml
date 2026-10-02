@@ -1,0 +1,120 @@
+name: fleettruth
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.6-pg17-bookworm
+    environment:
+      POSTGRES_DB: fleettruth
+      POSTGRES_USER: fleettruth
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD:?Run scripts/configure-demo.ps1 first}
+    volumes: [postgres-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U fleettruth -d fleettruth']
+      interval: 5s
+      retries: 30
+    restart: unless-stopped
+  redis:
+    image: redis:7.4-alpine
+    command: [redis-server, --appendonly, 'yes', --maxmemory, 256mb, --maxmemory-policy, allkeys-lru]
+    volumes: [redis-data:/data]
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      retries: 20
+    restart: unless-stopped
+  kafka:
+    image: apache/kafka:3.9.1
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      KAFKA_HEAP_OPTS: -Xmx512m -Xms256m
+    volumes: [kafka-data:/var/lib/kafka/data]
+    healthcheck:
+      test: [CMD-SHELL, '/opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --list >/dev/null']
+      interval: 10s
+      start_period: 30s
+      retries: 30
+    restart: unless-stopped
+  api:
+    build: ./api
+    environment:
+      SPRING_PROFILES_ACTIVE: local
+      BIND_ADDRESS: 0.0.0.0
+      DATABASE_URL: jdbc:postgresql://postgres:5432/fleettruth
+      DATABASE_USER: fleettruth
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD:?Configure demo credentials}
+      JWT_SECRET: ${JWT_SECRET:?Configure demo credentials}
+      REDIS_HOST: redis
+      REDIS_ENABLED: 'true'
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      KAFKA_ENABLED: 'true'
+      VECTOR_ENABLED: 'true'
+      CASSANDRA_ENABLED: ${CASSANDRA_ENABLED:-false}
+      CASSANDRA_HOST: cassandra
+      SEED_VEHICLES: 100000
+      SIMULATION_ENABLED: 'true'
+      TRACING_ENABLED: ${TRACING_ENABLED:-false}
+      TRACING_SAMPLE_RATE: ${TRACING_SAMPLE_RATE:-0.1}
+      OTLP_ENDPOINT: http://jaeger:4318/v1/traces
+      SPRING_KAFKA_TEMPLATE_OBSERVATION_ENABLED: 'true'
+      SPRING_KAFKA_LISTENER_OBSERVATION_ENABLED: 'true'
+    ports: ['127.0.0.1:8082:8080']
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+      kafka: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, curl, --fail, --silent, 'http://localhost:8080/actuator/health/readiness']
+      interval: 10s
+      start_period: 180s
+      retries: 30
+    restart: unless-stopped
+  web:
+    build: ./web
+    ports: ['127.0.0.1:3000:8080']
+    depends_on:
+      api: {condition: service_healthy}
+    restart: unless-stopped
+  cassandra:
+    image: cassandra:5.0
+    profiles: [nosql]
+    environment: {MAX_HEAP_SIZE: 512M, HEAP_NEWSIZE: 128M}
+    volumes: [cassandra-data:/var/lib/cassandra]
+    healthcheck:
+      test: [CMD-SHELL, 'cqlsh -e "DESCRIBE CLUSTER"']
+      interval: 20s
+      start_period: 120s
+      retries: 30
+  prometheus:
+    image: prom/prometheus:v3.2.1
+    profiles: [observability]
+    volumes:
+      - ./infra/observability/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./.runtime/prometheus-token:/etc/prometheus/token:ro
+    ports: ['127.0.0.1:9090:9090']
+  jaeger:
+    image: cr.jaegertracing.io/jaegertracing/jaeger:2.21.0
+    profiles: [observability]
+    ports: ['127.0.0.1:16686:16686']
+  grafana:
+    image: grafana/grafana:12.1.1
+    profiles: [observability]
+    environment:
+      GF_SECURITY_ADMIN_USER: fleettruth
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASSWORD:?Configure demo credentials}
+      GF_USERS_ALLOW_SIGN_UP: 'false'
+    ports: ['127.0.0.1:3001:3000']
+    volumes: [./infra/observability/grafana:/etc/grafana/provisioning:ro]
+volumes:
+  postgres-data:
+  redis-data:
+  kafka-data:
+  cassandra-data:

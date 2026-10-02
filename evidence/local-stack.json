@@ -1,0 +1,283 @@
+{
+  "recordedAt": "2026-10-01T23:29:12.871775+00:00",
+  "compose": [
+    {
+      "Service": "api",
+      "State": "running",
+      "Health": "healthy",
+      "Image": "fleettruth-api",
+      "Ports": "127.0.0.1:8082->8080/tcp"
+    },
+    {
+      "Service": "grafana",
+      "State": "running",
+      "Health": "",
+      "Image": "grafana/grafana:12.1.1",
+      "Ports": "127.0.0.1:3001->3000/tcp"
+    },
+    {
+      "Service": "jaeger",
+      "State": "running",
+      "Health": "",
+      "Image": "cr.jaegertracing.io/jaegertracing/jaeger:2.21.0",
+      "Ports": "127.0.0.1:16686->16686/tcp"
+    },
+    {
+      "Service": "kafka",
+      "State": "running",
+      "Health": "healthy",
+      "Image": "apache/kafka:3.9.1",
+      "Ports": "9092/tcp"
+    },
+    {
+      "Service": "postgres",
+      "State": "running",
+      "Health": "healthy",
+      "Image": "pgvector/pgvector:0.8.6-pg17-bookworm",
+      "Ports": "5432/tcp"
+    },
+    {
+      "Service": "prometheus",
+      "State": "running",
+      "Health": "",
+      "Image": "prom/prometheus:v3.2.1",
+      "Ports": "127.0.0.1:9090->9090/tcp"
+    },
+    {
+      "Service": "redis",
+      "State": "running",
+      "Health": "healthy",
+      "Image": "redis:7.4-alpine",
+      "Ports": "6379/tcp"
+    },
+    {
+      "Service": "web",
+      "State": "running",
+      "Health": "",
+      "Image": "fleettruth-web",
+      "Ports": "127.0.0.1:3000->8080/tcp"
+    }
+  ],
+  "dockerOverview": {
+    "vehicles": 100000,
+    "processed": 22992,
+    "accepted": 22992,
+    "quarantined": 0,
+    "eventsPerSecond": 11.6
+  },
+  "prometheus": [
+    {
+      "health": "up",
+      "lastError": "",
+      "lastScrape": "2026-10-01T23:29:08.346114331Z",
+      "scrapeUrl": "http://api:8080/actuator/prometheus"
+    }
+  ],
+  "grafana": {
+    "database": "ok",
+    "version": "12.1.1",
+    "commit": "df5de8219b41d1e639e003bf5f3a85913761d167"
+  },
+  "tracing": {
+    "services": [
+      "fleettruth",
+      "jaeger"
+    ],
+    "operations": [
+      {
+        "name": "task fleet-service.refresh-mappings",
+        "spanKind": "internal"
+      },
+      {
+        "name": "http post /api/privacy/erase",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/replays",
+        "spanKind": "server"
+      },
+      {
+        "name": "task simulator.simulate",
+        "spanKind": "internal"
+      },
+      {
+        "name": "security filterchain after",
+        "spanKind": "internal"
+      },
+      {
+        "name": "http get /actuator/health/**",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/vehicles",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/simulation",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/auth/config",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/mappings",
+        "spanKind": "server"
+      },
+      {
+        "name": "http post /api/assistant",
+        "spanKind": "server"
+      },
+      {
+        "name": "security filterchain before",
+        "spanKind": "internal"
+      },
+      {
+        "name": "authenticate bearertoken",
+        "spanKind": "internal"
+      },
+      {
+        "name": "http get /api/oems",
+        "spanKind": "server"
+      },
+      {
+        "name": "fleettruth.raw receive",
+        "spanKind": "consumer"
+      },
+      {
+        "name": "http get /api/events/{id}",
+        "spanKind": "server"
+      },
+      {
+        "name": "task replay-worker.advance",
+        "spanKind": "internal"
+      },
+      {
+        "name": "fleettruth.raw send",
+        "spanKind": "producer"
+      },
+      {
+        "name": "fleettruth.normalized send",
+        "spanKind": "producer"
+      },
+      {
+        "name": "authorize request",
+        "spanKind": "internal"
+      },
+      {
+        "name": "secured request",
+        "spanKind": "internal"
+      },
+      {
+        "name": "http get /api/audit",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /actuator/prometheus",
+        "spanKind": "server"
+      },
+      {
+        "name": "authorize method",
+        "spanKind": "internal"
+      },
+      {
+        "name": "http get /api/vehicles/{vin}",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/privacy/erasures",
+        "spanKind": "server"
+      },
+      {
+        "name": "http post /api/mappings/{id}/approve",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/overview",
+        "spanKind": "server"
+      },
+      {
+        "name": "task storage-projection.project-pending",
+        "spanKind": "internal"
+      },
+      {
+        "name": "http post /api/auth/login",
+        "spanKind": "server"
+      },
+      {
+        "name": "http post /api/replays",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/auth/me",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/ml/drift",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/analytics",
+        "spanKind": "server"
+      },
+      {
+        "name": "http post /api/mappings/{id}/preview",
+        "spanKind": "server"
+      },
+      {
+        "name": "http get /api/alerts",
+        "spanKind": "server"
+      }
+    ],
+    "sampledSpans": 395,
+    "sampledTraceIds": 30,
+    "spanNames": [
+      "authenticate bearertoken",
+      "authorize request",
+      "fleettruth.normalized send",
+      "fleettruth.raw receive",
+      "fleettruth.raw send",
+      "http get /actuator/prometheus",
+      "secured request",
+      "security filterchain after",
+      "security filterchain before",
+      "task fleet-service.refresh-mappings",
+      "task replay-worker.advance",
+      "task simulator.simulate",
+      "task storage-projection.project-pending"
+    ]
+  },
+  "imageScans": {
+    "api": {
+      "createdAt": "2026-10-02T04:37:07.8528576+05:30",
+      "imageId": "sha256:3a6dfae7b0c661dd0a3259cdc44974351769f15cb0dd6ab7b99c10d8356e0bd6",
+      "targets": [
+        {
+          "type": "ubuntu",
+          "packages": 143,
+          "findings": {
+            "LOW": 16,
+            "MEDIUM": 13
+          }
+        },
+        {
+          "type": "jar",
+          "packages": 136,
+          "findings": {}
+        }
+      ]
+    },
+    "web": {
+      "createdAt": "2026-10-02T04:37:31.9302767+05:30",
+      "imageId": "sha256:5a6e2289c4fa061d93b0ffd7a52b1206307aa11472eb689882581aba2dd318be",
+      "targets": [
+        {
+          "type": "alpine",
+          "packages": 31,
+          "findings": {}
+        }
+      ]
+    }
+  },
+  "scope": "Local single-node synthetic demo. Jaeger uses in-memory storage. Application image scans exclude infrastructure images; no HA, fleet-scale or centralized-log-store proof."
+}

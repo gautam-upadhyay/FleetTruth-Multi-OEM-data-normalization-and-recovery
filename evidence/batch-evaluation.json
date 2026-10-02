@@ -1,0 +1,74 @@
+{
+  "createdAt": "2026-10-01T06:31:17.675593+00:00",
+  "rows": 18504,
+  "pages": 4,
+  "limitReached": false,
+  "parquetDirectory": "C:\\Users\\gauta\\Downloads\\MotorQ\\.runtime\\lake\\20261001T063117675593Z",
+  "aggregates": [
+    {
+      "day": "2026-09-30",
+      "oem": "aster",
+      "events": 1980,
+      "accepted": 1980,
+      "meanSoc": 59.31898841208838,
+      "meanSpeed": 55.1999494949495
+    },
+    {
+      "day": "2026-09-30",
+      "oem": "helix",
+      "events": 2004,
+      "accepted": 2004,
+      "meanSoc": 59.0641654081228,
+      "meanSpeed": 56.24016966067864
+    },
+    {
+      "day": "2026-09-30",
+      "oem": "nord",
+      "events": 1980,
+      "accepted": 1980,
+      "meanSoc": 59.331352041624854,
+      "meanSpeed": 55.26575757575758
+    },
+    {
+      "day": "2026-09-30",
+      "oem": "vertex",
+      "events": 1980,
+      "accepted": 1980,
+      "meanSoc": 59.3161345911869,
+      "meanSpeed": 56.265505050505055
+    },
+    {
+      "day": "2026-10-01",
+      "oem": "aster",
+      "events": 2628,
+      "accepted": 2628,
+      "meanSoc": 59.41019034566809,
+      "meanSpeed": 55.18515981735159
+    },
+    {
+      "day": "2026-10-01",
+      "oem": "helix",
+      "events": 2676,
+      "accepted": 2676,
+      "meanSoc": 59.00784013277776,
+      "meanSpeed": 56.17869955156949
+    },
+    {
+      "day": "2026-10-01",
+      "oem": "nord",
+      "events": 2628,
+      "accepted": 2628,
+      "meanSoc": 59.37932764429606,
+      "meanSpeed": 55.255783866057854
+    },
+    {
+      "day": "2026-10-01",
+      "oem": "vertex",
+      "events": 2628,
+      "accepted": 2628,
+      "meanSoc": 59.36258479904131,
+      "meanSpeed": 56.25650684931506
+    }
+  ],
+  "scope": "Local bounded batch, not a billion-row benchmark. Source statuses may change during concurrent replay."
+}

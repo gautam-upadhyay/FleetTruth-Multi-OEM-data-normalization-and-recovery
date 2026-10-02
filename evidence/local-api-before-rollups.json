@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-10-01T12:07:39.355273+00:00",
+  "requests": 90,
+  "concurrency": 3,
+  "errors": [],
+  "elapsedSeconds": 5.214335300002858,
+  "p50Ms": 73.79209999999148,
+  "p95Ms": 569.331599999714,
+  "p99Ms": 689.7656000001007,
+  "endpoints": {
+    "/api/alerts": {
+      "requests": 30,
+      "p50Ms": 14.261600001191255,
+      "p95Ms": 25.02250000179629,
+      "p99Ms": 40.25829999955022
+    },
+    "/api/vehicles?limit=25": {
+      "requests": 30,
+      "p50Ms": 73.79209999999148,
+      "p95Ms": 200.86250000167638,
+      "p99Ms": 201.85339999807184
+    },
+    "/api/overview": {
+      "requests": 30,
+      "p50Ms": 395.7726000007824,
+      "p95Ms": 680.5467000012868,
+      "p99Ms": 689.7656000001007
+    }
+  },
+  "workloadAtStart": {
+    "vehicles": 100000,
+    "processed": 147456,
+    "eventsPerSecond": 5.6
+  },
+  "percentileMethod": "nearest-rank",
+  "warmup": "One overview read before timing",
+  "scope": "Local API smoke benchmark; not 100K events/sec, burst, soak, HA, or production SLO proof"
+}
